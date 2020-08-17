@@ -1,4 +1,4 @@
-import practice.Numbers;
+import practice.DigitSumChallenge;
 
 public class Main {
 
@@ -101,7 +101,14 @@ public class Main {
 //        System.out.println(a);
 
 
-        Numbers.sumOfEvenNumbers(1,10);
+//        int a = DigitSumChallenge.sumDigits(614);
+//        System.out.println(a);
+
+//        Boolean a = NumberPalindrome.isPalindrome(11) ;
+//        System.out.println(a);
+
+        int a = DigitSumChallenge.sumFirstAndLastDigit(10) ;
+        System.out.println(a);
 
     }
 }
