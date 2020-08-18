@@ -1,4 +1,4 @@
-import practice.DigitSumChallenge;
+import practice.Numbers;
 
 public class Main {
 
@@ -107,8 +107,17 @@ public class Main {
 //        Boolean a = NumberPalindrome.isPalindrome(11) ;
 //        System.out.println(a);
 
-        int a = DigitSumChallenge.sumFirstAndLastDigit(10) ;
-        System.out.println(a);
+//        List <Integer> a = Numbers.getEachDigit(698555555);
+//        System.out.println(a);
+
+//        List<Integer> b = Numbers.getTheDividers(32);
+//        System.out.println(b);
+//        List<Integer> c = Numbers.getTheDividers(10);
+//        System.out.println(c);
+//        int a = Numbers.getGreatestCommonDivisor(32,10) ;
+//        System.out.println(a);
+
+        System.out.println(Numbers.isPerfectNumber(28));
 
     }
 }

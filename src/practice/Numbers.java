@@ -1,5 +1,9 @@
 package practice;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Numbers {
 
     public void checkNumber (int number){
@@ -142,16 +146,102 @@ public class Numbers {
         return count ;
     }
 
+    public static boolean hasSharedDigit (int number1 , int number2) {
 
+        if (number1 < 10 || number1 >99 || number2 < 10 || number2 > 99) {
+            return  false ;
+        }
+        List <Integer> digitsInNumber1 = getEachDigit(number1) ;
+        List <Integer> digitsInNumber2 = getEachDigit(number2) ;
+        for (Integer digit1 : digitsInNumber1) {
+            for (Integer digit2 : digitsInNumber2) {
+                if (digit1.equals(digit2)) {
+                    System.out.println(number1 + " and " + number2 + " has shared digit : " + digit1);
+                    return true ;
+                }
+            }
+        }
+        return false ;
+    }
 
+    private static List<Integer> getEachDigit (int number) {
+        List<Integer> digitsInNumber1 = new ArrayList <Integer> () ;
+        int digit = 0 ;
+        if (number < 0) {
+            return Collections.singletonList(-1);
+        }
+        while (number > 0) {
+            digit = number % 10 ;
+            digitsInNumber1.add(digit);
+            number /= 10 ;
+        }
+        return digitsInNumber1 ;
+    }
 
+    private static int getTheLastDigit(int number) {
+        if (number < 0){
+            return -1 ;
+        }
+        return number % 10 ;
 
+    }
 
+    public static boolean hasSameLastDigit(int num1 , int num2 , int num3) {
+        boolean isLastDigitSame ;
+        if(num1 <10 || num2 < 10 || num3 < 10 || num1 > 1000 || num2 > 100 || num3 >1000){
+            isLastDigitSame = false ;
+        }else if(getTheLastDigit(num1) == getTheLastDigit(num2) || getTheLastDigit(num2) == getTheLastDigit(num3)
+        || getTheLastDigit(num1) == getTheLastDigit(num3)){
+            isLastDigitSame = true ;
+        }else {
+            isLastDigitSame = false ;
+        }
+        return isLastDigitSame ;
+    }
 
+    public static List<Integer> getTheDividers(int number){  //TODO : how to return a -1 list
+        List<Integer> dividers = new ArrayList<Integer>();
+        int remainder ;
+        for (int divider = 1 ; divider <= number ; divider++){
+            remainder = number % divider ;
+            if (remainder == 0){
+                dividers.add(divider) ;
+            }
+        }
+        return dividers ;
+    }
 
+    public static int getGreatestCommonDivisor(int num1 , int num2){
+        if (num1 < 10 || num2 <10) {
+            return -1 ;
+        }
+        List<Integer> dividers1 = getTheDividers(num1) ;
+        List<Integer> dividers2 = getTheDividers(num2) ;
+        List<Integer> commonDividers = new ArrayList<Integer>() ;
+        for (Integer divider1 : dividers1) {
+            for (Integer divider2 : dividers2){
+                if (divider1 == divider2) {
+                    commonDividers.add(divider1) ;
+                }
+            }
+        }
+        return commonDividers.get(commonDividers.size()-1);
+    }
 
-
-
-
-
+    public static boolean isPerfectNumber(int number){
+        boolean isPerfectNumber = true ;
+        if (number < 1) {
+            isPerfectNumber = false ;
+        }
+        List<Integer> dividers = new ArrayList<Integer>();
+        dividers = getTheDividers(number) ;
+        int sum = 0 ;
+        for (int i = 0 ; i < dividers.size() -1 ; i++){
+            sum += dividers.get(i) ;
+        }
+        if (sum == number) {
+            isPerfectNumber = true ;
+        }
+        return isPerfectNumber ;
+    }
 }

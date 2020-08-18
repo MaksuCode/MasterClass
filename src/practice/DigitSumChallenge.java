@@ -17,17 +17,35 @@ public class DigitSumChallenge {
     }
 
     public static int sumFirstAndLastDigit (int number) {
-        if (number < 0) {  //TODO : bugfix 10
+        int sum = 0;
+        int lastDigit ;
+        if (number < 0) {
+            return -1 ;
+        }else if (number < 10){
+            sum = number * 2 ;
+        }else {
+            lastDigit = number % 10 ;
+            while (number >= 10) {
+                number /= 10 ;
+            }
+            sum = number + lastDigit ;
+        }
+        return sum ;
+    }
+
+    public static int getEvenDigitSum (int number) {
+        int sum = 0 ;
+        int digit = 0 ;
+        if (number < 0) {
             return -1 ;
         }
-        int lastDigit = number % 10 ;
-        if (number > 10) {
-            number = number/10 ;
-        }
-        while (number > 10) {
+        while (number > 0) {
+            digit = number % 10 ;
+            if (digit % 2 == 0) {
+                sum = sum + digit ;
+            }
             number /= 10 ;
         }
-        int firsDigit = number ;
-        return firsDigit  + lastDigit ;
+        return sum ;
     }
 }
