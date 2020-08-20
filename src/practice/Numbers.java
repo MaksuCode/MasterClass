@@ -164,7 +164,7 @@ public class Numbers {
         return false ;
     }
 
-    private static List<Integer> getEachDigit (int number) {
+    public static List<Integer> getEachDigit (int number) {
         List<Integer> digitsInNumber1 = new ArrayList <Integer> () ;
         int digit = 0 ;
         if (number < 0) {
@@ -217,7 +217,7 @@ public class Numbers {
         }
         List<Integer> dividers1 = getTheDividers(num1) ;
         List<Integer> dividers2 = getTheDividers(num2) ;
-        List<Integer> commonDividers = new ArrayList<Integer>() ;
+        List<Integer> commonDividers = new ArrayList<>() ;
         for (Integer divider1 : dividers1) {
             for (Integer divider2 : dividers2){
                 if (divider1 == divider2) {
@@ -233,7 +233,7 @@ public class Numbers {
         if (number < 1) {
             isPerfectNumber = false ;
         }
-        List<Integer> dividers = new ArrayList<Integer>();
+        List<Integer> dividers;
         dividers = getTheDividers(number) ;
         int sum = 0 ;
         for (int i = 0 ; i < dividers.size() -1 ; i++){

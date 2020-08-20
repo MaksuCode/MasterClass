@@ -1,4 +1,4 @@
-import practice.Numbers;
+import practice.NumberToWords;
 
 public class Main {
 
@@ -117,7 +117,17 @@ public class Main {
 //        int a = Numbers.getGreatestCommonDivisor(32,10) ;
 //        System.out.println(a);
 
-        System.out.println(Numbers.isPerfectNumber(28));
+//        System.out.println(Numbers.isPerfectNumber(28));
+//        System.out.println(NumberToWords.getDigitCount(47896));
+
+//        System.out.println(NumberToWords.getDigitCount(001));
+
+//        NumberToWords.numberToWords(123);
+//        System.out.println(Numbers.getEachDigit(123));
+
+        System.out.println(NumberToWords.reverse(1425));
+        NumberToWords.numberToWords(12600);
+
 
     }
 }
