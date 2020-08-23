@@ -1,4 +1,4 @@
-import practice.NumberToWords;
+import practice.ComplexNumber;
 
 public class Main {
 
@@ -125,8 +125,126 @@ public class Main {
 //        NumberToWords.numberToWords(123);
 //        System.out.println(Numbers.getEachDigit(123));
 
-        System.out.println(NumberToWords.reverse(1425));
-        NumberToWords.numberToWords(12600);
+//        System.out.println(NumberToWords.reverse(1425));
+//        NumberToWords.numberToWords(-12600);
+
+
+//        System.out.println(FlourPacker.canPack(4,0,22));
+
+//        System.out.println(Numbers.getTheDividers(36));
+
+//        System.out.println(PrimeNumbers.getLargestPrime(45));
+
+//        ReadingInputChallenge.readInputValues();
+
+//        ReadingInputChallenge.printMaxAndMinNumbers();
+
+//        InputCalculator.inputThenPrintSumAndAverage();
+
+//        System.out.println(PaintJob.getBucketCount(3.4,1.5)) ;
+
+//        Car porsche = new Car() ;
+//        porsche.setModel("911");
+//        System.out.println("Mopdel is " +porsche.getModel());
+
+//        SumCalculator calculator = new SumCalculator() ;
+//        calculator.setFirstNumber(21);
+//        calculator.setSecondNumber(3);
+//        System.out.println("add = " + calculator.getAdditionResult());
+//        System.out.println("Substract =" + calculator.getSubtractionResult());
+//        System.out.println("Multiplication =" + calculator.getMultiplicationResult());
+//        System.out.println("Diision = " + calculator.getDivisionResult());
+
+//        Person person = new Person() ;
+//        person.setFirstName("");
+//        person.setLastName("");
+//        person.setAge(10);
+//        System.out.println("Full name= " +person.getFullName());
+//        System.out.println("teen= " +person.isTeen());
+//        person.setFirstName("John");
+//        person.setAge(18);
+//        System.out.println("Full name= " +person.getFullName());
+//        System.out.println(person.isTeen());
+//        person.setLastName("Smith");
+//        System.out.println("Full name= " +person.getFullName());
+
+//        BankAccount account = new BankAccount() ;
+//        account.setAccountNumber(123456789);
+//        account.setBalance(1000);
+//        account.setCustomerName("Mustafa Aksu");
+//        account.setEmail("maksu@innova.com.tr");
+//        account.setPhoneNumber("5426547396");
+//        System.out.println("The account " + account.getAccountNumber()+ " belongs to customer " + account.getCustomerName()+
+//                " who has the following pesonal information :");
+//        System.out.println("*** Email address : " +account.getEmail());
+//        System.out.println("*** Phone number : " +account.getPhoneNumber());
+//        System.out.println("************************************************");
+//        System.out.println("Balance :" +account.getBalance() +" TL");
+//        account.depositFund(0);
+//        account.withdrawFund(1000);
+
+//        BankAccount account = new BankAccount(12345,950,"Mustafa" , "maksu@innova.com.tr" ,
+//                "5426547396") ;
+//        System.out.println("The account " + account.getAccountNumber()+ " belongs to customer " + account.getCustomerName()+
+//                " who has the following pesonal information :");
+//        System.out.println("*** Email address : " +account.getEmail());
+//        System.out.println("*** Phone number : " +account.getPhoneNumber());
+//        System.out.println("************************************************");
+//        System.out.println("Balance :" +account.getBalance() +" TL");
+//        account.depositFund(0);
+//        account.withdrawFund(1000);
+
+//        BankAccount account = new BankAccount("Mustafa" , "maksu@innova.com.tr","456789") ;
+//        System.out.println(account.getAccountNumber());
+
+//        VipCustomer vipCustomer = new VipCustomer("Mustafa" ,"mustafaksu4@gmail.com") ;
+//        System.out.println("Customer " + vipCustomer.getName() + " with " + vipCustomer.getEmailAddress() + " has " +vipCustomer.getCreditLimit() + " TL credit limit");
+//        VipCustomer vipCustomer2 = new VipCustomer() ;
+//        System.out.println("Customer " + vipCustomer2.getName() + " with " + vipCustomer2.getEmailAddress() + " has " +vipCustomer2.getCreditLimit() + " TL credit limit");
+
+//        Wall wall = new Wall() ;
+//        System.out.println(wall.getArea());
+//        System.out.println(wall.getHeight());
+//        System.out.println(wall.getWidth());
+//        Wall newWall = new Wall(-1,5) ;
+//        System.out.println(newWall.getWidth());
+//        System.out.println(newWall.getHeight());
+//        System.out.println(newWall.getArea());
+
+//        Point point = new Point(3,4) ;
+//        System.out.println(point.distance(1,1));
+
+//        Carpet carpet = new Carpet(1.5) ;
+//        Floor floor = new Floor(5.4,4.5) ;
+//        CarpetCostCalculator calculator = new CarpetCostCalculator(floor , carpet) ;
+//        System.out.println("Total price : " + calculator.getTotalCost());
+
+        ComplexNumber complexNumber_1 = new ComplexNumber(1.0,1.0) ;
+        ComplexNumber complexNumber_2 = new ComplexNumber(2.5,-1.5) ;
+        complexNumber_1.add(1,1);
+        System.out.println("Complexnumber_1 Real part : " + complexNumber_1.getReal());
+        System.out.println("Complexnumber_1 Imaginary part : " + complexNumber_1.getImaginary());
+        complexNumber_1.subtract(complexNumber_2);
+        System.out.println("Complexnumber_1 Real part : " + complexNumber_1.getReal());
+        System.out.println("Complexnumber_1 Imaginary part : " + complexNumber_1.getImaginary());
+        complexNumber_2.subtract(complexNumber_1);
+        System.out.println("Complexnumber_2 Real part : " +complexNumber_2.getReal());
+        System.out.println("Complexnumber_2 Imaginary part : " +complexNumber_2.getImaginary());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }

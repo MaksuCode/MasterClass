@@ -15,11 +15,9 @@ public class NumberToWords {
             System.out.println(digitToString(digit));
             reversedNumber /= 10 ;
         }
-        if (difference > 0) {
-            while (difference > 0) {
-                System.out.println(digitToString(0));
-                difference-- ;
-            }
+        while (difference > 0) {
+            System.out.println(digitToString(0));
+            difference-- ;
         }
     }
 

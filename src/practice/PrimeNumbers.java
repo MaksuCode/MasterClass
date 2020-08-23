@@ -1,5 +1,8 @@
 package practice;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PrimeNumbers {
 
     public static boolean isPrime (int n){
@@ -69,5 +72,22 @@ public class PrimeNumbers {
             }
         }
         return count ;
+    }
+
+    public static int getLargestPrime (int number) {
+
+        List<Integer> primeNumbers = new ArrayList<>() ;
+        List<Integer> dividers = Numbers.getTheDividers(number) ;
+        for (Integer divider : dividers){
+            if (isPrime(divider)) {
+                primeNumbers.add(divider) ;
+            }
+        }
+        if (primeNumbers.size() ==0 || number <0) {
+            return -1 ;
+        }
+        return primeNumbers.get(primeNumbers.size()-1) ;
+
+
     }
 }
