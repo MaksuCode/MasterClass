@@ -1,4 +1,4 @@
-import practice.ComplexNumber;
+import practice.Dog;
 
 public class Main {
 
@@ -219,17 +219,24 @@ public class Main {
 //        CarpetCostCalculator calculator = new CarpetCostCalculator(floor , carpet) ;
 //        System.out.println("Total price : " + calculator.getTotalCost());
 
-        ComplexNumber complexNumber_1 = new ComplexNumber(1.0,1.0) ;
-        ComplexNumber complexNumber_2 = new ComplexNumber(2.5,-1.5) ;
-        complexNumber_1.add(1,1);
-        System.out.println("Complexnumber_1 Real part : " + complexNumber_1.getReal());
-        System.out.println("Complexnumber_1 Imaginary part : " + complexNumber_1.getImaginary());
-        complexNumber_1.subtract(complexNumber_2);
-        System.out.println("Complexnumber_1 Real part : " + complexNumber_1.getReal());
-        System.out.println("Complexnumber_1 Imaginary part : " + complexNumber_1.getImaginary());
-        complexNumber_2.subtract(complexNumber_1);
-        System.out.println("Complexnumber_2 Real part : " +complexNumber_2.getReal());
-        System.out.println("Complexnumber_2 Imaginary part : " +complexNumber_2.getImaginary());
+//        ComplexNumber complexNumber_1 = new ComplexNumber(1.0,1.0) ;
+//        ComplexNumber complexNumber_2 = new ComplexNumber(2.5,-1.5) ;
+//        complexNumber_1.add(1,1);
+//        System.out.println("Complexnumber_1 Real part : " + complexNumber_1.getReal());
+//        System.out.println("Complexnumber_1 Imaginary part : " + complexNumber_1.getImaginary());
+//        complexNumber_1.subtract(complexNumber_2);
+//        System.out.println("Complexnumber_1 Real part : " + complexNumber_1.getReal());
+//        System.out.println("Complexnumber_1 Imaginary part : " + complexNumber_1.getImaginary());
+//        complexNumber_2.subtract(complexNumber_1);
+//        System.out.println("Complexnumber_2 Real part : " +complexNumber_2.getReal());
+//        System.out.println("Complexnumber_2 Imaginary part : " +complexNumber_2.getImaginary());
+
+//        Animal animal = new Animal("Animal",1 , 1,5,5) ;
+        Dog dog = new Dog("Karabaş" , 8 , 20 , 1 , 2 , 3 , 4 , 5 , 5, "long silky") ;
+//        dog.eat();
+//        dog.run();
+        dog.walk();
+
 
 
 
