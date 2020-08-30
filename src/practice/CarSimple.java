@@ -1,6 +1,6 @@
 package practice;
 
-public class Car {
+public class CarSimple {
 
     private int doors ;
     private int wheels ;

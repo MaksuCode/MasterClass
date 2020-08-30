@@ -1,4 +1,4 @@
-import practice.Dog;
+import practice.oopexample.*;
 
 public class Main {
 
@@ -232,10 +232,92 @@ public class Main {
 //        System.out.println("Complexnumber_2 Imaginary part : " +complexNumber_2.getImaginary());
 
 //        Animal animal = new Animal("Animal",1 , 1,5,5) ;
-        Dog dog = new Dog("Karabaş" , 8 , 20 , 1 , 2 , 3 , 4 , 5 , 5, "long silky") ;
-//        dog.eat();
-//        dog.run();
-        dog.walk();
+//        Dog dog = new Dog("Karabaş" , 8 , 20 , 1 , 2 , 3 , 4 , 5 , 5, "long silky") ;
+////        dog.eat();
+////        dog.run();
+//        dog.walk();
+
+//        Car car = new Car(4,6,4,"Diesel",false,false) ;
+//        System.out.println(car.getWheels());
+//        car.move(5);
+//        car.changeGear(2);
+
+//        Circle circle = new Circle(2) ;
+//        System.out.println(circle.getRadius());
+//        System.out.println(circle.getArea());
+//
+//        Cylinder cylinder = new Cylinder(2,2) ;
+//        System.out.println(cylinder.getHeight());
+//        System.out.println(cylinder.getVolume());
+
+//        Rectangle rectangle = new Rectangle(1,2);
+//        System.out.println(rectangle.getLength());
+//        System.out.println(rectangle.getWidth());
+//        System.out.println(rectangle.getArea());
+//
+//        Cuboid cuboid = new Cuboid(2,3,4);
+//        System.out.println(cuboid.getLength());
+//        System.out.println(cuboid.getWidth());
+//        System.out.println(cuboid.getHeight());
+//        System.out.println(cuboid.getVolume());
+
+//        Dimensions dimensions = new Dimensions(20,20,5) ;
+//        Case theCase = new Case("2208","Dell","240",dimensions);
+//        Monitor monitor = new Monitor("27inch Beast", "Acer",27,new Resolution(2540,1440)) ;
+//        Motherboard motherboard = new Motherboard("BJ-200","Asus",4,6,"v2.44");
+//        PC thePC = new PC(theCase,monitor,motherboard) ;
+////        thePC.getMonitor().drawPixelAt(1500,2500,"green");
+////        thePC.getMotherboard().loadProgram("Zoom 1.0");
+////        thePC.getTheCase().pressPowerButton();
+//        thePC.powerUp();
+
+//        Printer printer = new Printer(false) ;
+//        System.out.println(printer.printPage(40));
+//        printer.fillUpToner();
+//        System.out.println(printer.getTonerLevel());
+//
+//        Printer printer_2 = new Printer(80,100,true) ;
+//        System.out.println(printer_2.printPage(50));
+//        printer_2.fillUpToner();
+//        System.out.println(printer_2.getTonerLevel());
+
+//        Printer printer = new Printer(true) ;
+//        printer.printPage(80) ;
+//        printer.printPage(1);
+//        printer.addToner(40);
+//        printer.printPage(75);
+//        System.out.println(printer.getTonerLevel());
+
+//        Printer printer = new Printer(false) ;
+//        printer.printPage(50) ;
+//        printer.printPage(30);
+//        System.out.println(printer.getPagesPrinted());
+//        System.out.println(printer.getTonerLevel());
+//        printer.addToner(70) ;
+//        System.out.println(printer.getTonerLevel());
+
+
+//        Car car = new Car(4,"Mustafa's car") ;
+//        System.out.println(car.accelerate());
+//        Volvo volvo = new Volvo(8,"My best car Volvo");
+//        System.out.println(volvo.accelerate());
+//        LandRover landRover = new LandRover(6,"Best Jeep ever");
+//        System.out.println(landRover.accelerate());
+//
+//        Honda honda = new Honda(2,"Civic") ;
+//        System.out.println(honda.brake());
+//
+//        System.out.println(landRover.brake());
+
+        Hamburger hamburger = new Hamburger(5,"Classic Burger",new Bread("classic Bread"),new Meat("Cow"),
+                new Additions("Drink"),new Additions("Chips"), new Additions("Hot Dog"));
+        System.out.println(hamburger.getTotalPrice());
+
+        HealthyBurger healthyBurger = new HealthyBurger(6,"Healthy burger" ,  new Bread("Slim one"),new Meat("diete meat"),new Additions("Water")
+                ,new Additions("Chips"));
+        System.out.println(healthyBurger.getTotalPrice());
+
+
 
 
 
