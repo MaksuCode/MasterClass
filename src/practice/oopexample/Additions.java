@@ -1,8 +1,5 @@
 package practice.oopexample;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Additions {
 
     private int priceOfAddition ;
@@ -15,26 +12,31 @@ public class Additions {
     public Additions(String nameOfAddition) {
         this.nameOfAddition = nameOfAddition;
         setPriceOfAddition(nameOfAddition) ;
-        listOfAdditions(nameOfAddition) ;
     }
 
     public int setPriceOfAddition (String nameOfAddition) {
         this.nameOfAddition = nameOfAddition ;
         switch (nameOfAddition){
             case "Chips" :
-                return this.priceOfAddition = 5 ;
+                this.priceOfAddition = 5 ;
+                break;
             case "Coke" :
-                return this.priceOfAddition = 3 ;
+                this.priceOfAddition = 4 ;
+                break;
             case "Hot Dog" :
-                return this.priceOfAddition = 6 ;
+                this.priceOfAddition = 3 ;
+                break;
             case "Water":
-                return this.priceOfAddition = 2 ;
+                this.priceOfAddition = 2 ;
+                break;
             case "Ketchup" :
-                return this.priceOfAddition = 1 ;
+                this.priceOfAddition = 1 ;
+                break;
             case "Dessert":
-                return this.priceOfAddition = 3 ;
+                this.priceOfAddition = 7 ;
+                break;
         }
-        return 0 ;
+        return priceOfAddition ;
     }
 
 
@@ -45,14 +47,5 @@ public class Additions {
     public String getNameOfAddition() {
         return nameOfAddition;
     }
-
-    public List<String> listOfAdditions (String nameOfAddition) {
-        List <String> list = new ArrayList<>() ;
-        if (!nameOfAddition.equals("")) {
-            list.add(nameOfAddition) ;
-        }
-        return list ;
-    }
-
 
 }

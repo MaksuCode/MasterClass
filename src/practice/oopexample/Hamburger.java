@@ -11,6 +11,10 @@ public class Hamburger {
     private Additions addition_3 ;
     private Additions addition_4 ;
 
+    {
+        System.out.println("This is a init block");
+    }
+
     //Hamburger with no additions.
     public Hamburger(int basePrice, String nameOfBurger, Bread breadRollType, Meat meat) {
         this.basePrice = basePrice;
@@ -60,16 +64,48 @@ public class Hamburger {
         this.addition_4 = addition_4 ;
     }
 
-    private int getBasePrice() {
+    public int getBasePrice() {
         return basePrice;
     }
 
     public int getTotalPrice() {
-        int totalPrice = getBasePrice() + addition_1.getPriceOfAddition() + addition_2.getPriceOfAddition() + addition_3.getPriceOfAddition() + addition_4.getPriceOfAddition() ;
-        System.out.println("Total prices : " + totalPrice);
+        int additionsPrice = 0 ;
         System.out.println("Base price : " + getBasePrice());
-        return 1 ; // TODO : fix
+        if (!getAddition_1().getNameOfAddition().isEmpty()) {
+            System.out.println(getAddition_1().getNameOfAddition() + " : " + getAddition_1().getPriceOfAddition());
+            additionsPrice += getAddition_1().getPriceOfAddition();
+        }
+        if (!getAddition_2().getNameOfAddition().isEmpty()){
+            System.out.println(getAddition_2().getNameOfAddition() + " : " + getAddition_2().getPriceOfAddition());
+            additionsPrice += getAddition_2().getPriceOfAddition();
+        }
+        if (!getAddition_3().getNameOfAddition().isEmpty()){
+            System.out.println(getAddition_3().getNameOfAddition() + " : " + getAddition_3().getPriceOfAddition());
+            additionsPrice += getAddition_3().getPriceOfAddition();
+        }
+        if (!getAddition_4().getNameOfAddition().isEmpty()) {
+            System.out.println(getAddition_4().getNameOfAddition() + " : " + getAddition_4().getPriceOfAddition());
+            additionsPrice += getAddition_4().getPriceOfAddition();
+        }
+        int total = getBasePrice() + additionsPrice ;
+        System.out.println("Total price : " + total);
+        return total ;
+    }
 
+    public Additions getAddition_1() {
+        return addition_1;
+    }
+
+    public Additions getAddition_2() {
+        return addition_2;
+    }
+
+    public Additions getAddition_3() {
+        return addition_3;
+    }
+
+    public Additions getAddition_4() {
+        return addition_4;
     }
 
     public String getNameOfBurger() {
